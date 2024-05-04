@@ -1,0 +1,61 @@
+@layer reset {
+  *,
+  ::after,
+  ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid var(--fg);
+    font: unset;
+    color: unset;
+    appearance: none;
+    background: unset;
+    font-style: unset;
+    text-decoration: none;
+    outline: var(--accent) solid 0;
+    outline-offset: -0.2rem;
+    line-height: inherit;
+  }
+
+  :root {
+    --dark: #282a36;
+    --dark-1: #343746;
+    --dark-2: #414458;
+    --light: #f8f8f2;
+    --primary: #50fa7b;
+    --accent: #ffb86c;
+    --bg: var(--dark);
+    --fg: var(--light);
+
+    display: unset;
+    color: var(--fg);
+    background-color: var(--bg);
+    font-family: "Noto Sans", sans-serif;
+    line-height: normal;
+  }
+
+  :focus-visible {
+    outline-width: 0.2rem;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #c7c9d6;
+      --fg: var(--dark);
+      --primary: #bd93f9;
+      --accent: #ff79c6;
+    }
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings:
+      "FILL" 1,
+      "wght" 400,
+      "GRAD" 0,
+      "opsz" 24;
+  }
+
+  svg {
+    vertical-align: middle;
+  }
+}
